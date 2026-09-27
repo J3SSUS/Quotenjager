@@ -1,0 +1,1193 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Second Half</title>
+<meta name="description" content="Simple second-half goal predictions for the Bundesliga, ready to read and bet on.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#/" aria-label="Second Half — Home">
+      <img class="logo-light" src="assets/logo-light.png" alt="Quotenjäger">
+      <img class="logo-dark" src="assets/logo-dark.png" alt="Quotenjäger">
+    </a>
+    <nav>
+      <a href="#/model" data-route="/model">Model</a>
+      <a href="#/bets" data-route="/bets">Bets</a>
+      <a href="#/upcoming" data-route="/upcoming">Upcoming</a>
+      <a href="#/how-it-works" data-route="/how-it-works">How it works</a>
+    </nav>
+  </div>
+</div>
+
+<main id="route-/" class="page">
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Bundesliga · Second Half</div>
+    <h1>Betting on another <span class="accent-word">Niveau</span></h1>
+
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hv">112</div><div class="hl">Matches predicted<br>this season</div></div>
+      <div class="hero-stat"><div class="hv">69%</div><div class="hl">Cumulative accuracy<br>2026–27</div></div>
+    </div>
+  </div>
+</div>
+
+<section id="vivo">
+  <div class="wrap">
+    <div class="shead">
+      <h2>At halftime right now</h2>
+      <div class="sub">Matches that just reached the break — the prediction is ready before the second half even starts.</div>
+    </div>
+
+    <div class="feature" style="margin-top:0;">
+      <div>
+        <div class="live"><span class="pulse"></span>Halftime</div>
+        <div class="teams">RB Leipzig <span class="vs">vs</span> Bayer Leverkusen</div>
+        <div class="meta">0–1 · Bundesliga, matchday 5</div>
+        <div class="verdict">The model sees an <b>82% probability</b> of 2 or more goals in the second half.</div>
+      </div>
+      <div class="flip">
+        <div class="pct">82%</div>
+        <div class="lbl">Over 1.5</div>
+      </div>
+    </div>
+
+    <div class="grid" style="margin-top:14px;">
+      <div class="card">
+        <div class="live-tag"><span class="pulse"></span>Halftime</div>
+        <div class="matchup">Werder Bremen <span class="vs">vs</span> Union Berlin</div>
+        <div class="score">1–1 at halftime</div>
+        <div class="pick-row">
+          <span class="badge over">Over 1.5</span>
+          <span class="conf">71%</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="live-tag"><span class="pulse"></span>Halftime</div>
+        <div class="matchup">FC Augsburg <span class="vs">vs</span> VfL Wolfsburg</div>
+        <div class="score">0–0 at halftime</div>
+        <div class="pick-row">
+          <span class="badge under">Under 1.5</span>
+          <span class="conf">64%</span>
+        </div>
+      </div>
+      <div class="card">
+        <div class="live-tag"><span class="pulse"></span>Halftime</div>
+        <div class="matchup">Bayern München <span class="vs">vs</span> SC Freiburg</div>
+        <div class="score">2–0 at halftime</div>
+        <div class="pick-row">
+          <span class="badge over">Over 1.5</span>
+          <span class="conf">77%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="proximos">
+  <div class="wrap">
+    <div class="shead">
+      <h2>Upcoming matches</h2>
+      <div class="sub">Not started yet, or still in the first half. The pick unlocks only once it reaches halftime.</div>
+    </div>
+    <div class="grid">
+      <div class="card locked">
+        <div class="matchup">Borussia Dortmund <span class="vs">vs</span> Bayer Leverkusen</div>
+        <div class="score">Saturday · 18:30</div>
+        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+      </div>
+      <div class="card locked">
+        <div class="matchup">VfB Stuttgart <span class="vs">vs</span> M'gladbach</div>
+        <div class="score">Saturday · 15:30</div>
+        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+      </div>
+      <div class="card locked">
+        <div class="matchup">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
+        <div class="score">Sunday · 17:30</div>
+        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+      </div>
+    </div>
+
+    <a class="see-more" href="#/upcoming">See full schedule →</a>
+  </div>
+</section>
+
+<section id="historial">
+  <div class="wrap">
+    <div class="shead">
+      <h2>How the model has done</h2>
+      <div class="sub">Only settled picks, compared against the real result.</div>
+    </div>
+
+    <div class="record-top">
+      <div class="record-big">68<span>% accuracy<br>last 50 matches</span></div>
+      <div class="streak">
+        <i class="y">✓</i><i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i>
+        <i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i><i class="y">✓</i>
+      </div>
+    </div>
+
+    <div class="mini-stats">
+      <div class="mini-stat"><div class="mv">74%</div><div class="ml">Average confidence</div></div>
+      <div class="mini-stat"><div class="mv">4</div><div class="ml">Correct picks in a row</div></div>
+      <div class="mini-stat"><div class="mv">81%</div><div class="ml">Accuracy when the pick is above 75%</div></div>
+    </div>
+
+    <div>
+      <div class="history-row">
+        <div class="hteams">Hoffenheim <span style="color:var(--text-dim);font-weight:400;">vs</span> Mainz 05</div>
+        <div class="hscore">1–2 final · 3 2nd-half goals</div>
+        <div class="badge over">Over 1.5 · 76%</div>
+        <div class="hresult" style="color:var(--over);">✓</div>
+      </div>
+      <div class="history-row">
+        <div class="hteams">Union Berlin <span style="color:var(--text-dim);font-weight:400;">vs</span> VfL Bochum</div>
+        <div class="hscore">0–0 final · 1 2nd-half goal</div>
+        <div class="badge under">Under 1.5 · 69%</div>
+        <div class="hresult" style="color:var(--over);">✓</div>
+      </div>
+      <div class="history-row">
+        <div class="hteams">Bayer Leverkusen <span style="color:var(--text-dim);font-weight:400;">vs</span> SC Freiburg</div>
+        <div class="hscore">2–1 final · 1 2nd-half goal</div>
+        <div class="badge over">Over 1.5 · 58%</div>
+        <div class="hresult" style="color:var(--under);">✕</div>
+      </div>
+    </div>
+
+    <a class="see-more" href="#/model">See the model's full track record →</a>
+  </div>
+</section>
+
+<section id="como" style="border-bottom:none;">
+  <div class="wrap">
+    <div class="shead">
+      <h2>How it works</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">01</div>
+        <h3>First half ends</h3>
+        <p>The model reads goals, shots, possession and ~45 other 1st-half metrics the moment they're played.</p>
+      </div>
+      <div class="step">
+        <div class="n">02</div>
+        <h3>Compares it against history</h3>
+        <p>It checks them against more than 3,900 Bundesliga first halves from 2013 to 2024.</p>
+      </div>
+      <div class="step">
+        <div class="n">03</div>
+        <h3>You get the pick</h3>
+        <p>Before the second half kicks off, you already know how likely it is to have over 1.5 goals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<main id="route-/model" class="page" hidden>
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="shead">
+        <h2 class="page-title">Modell</h2>
+        <div class="sub">Predictions from the 2026–2027 season onward, how the model is doing match by match, and the 1st-half variables that went into each pick.</div>
+      </div>
+      <div class="model-banner">
+        <div class="mb-left">
+          <div class="mb-eyebrow">Model in production</div>
+          <div class="mb-model">XGBoost</div>
+          <div class="mb-sub">Binary classification · Over/Under 1.5 goals in the 2nd half · ~30 1st-half variables</div>
+        </div>
+        <div class="mb-right">
+          <div class="mb-stat">
+            <div class="mb-num">69%</div>
+            <div class="mb-lbl">2026–27 accuracy</div>
+          </div>
+          <div class="mb-stat">
+            <div class="mb-num">112</div>
+            <div class="mb-lbl">Matches predicted</div>
+          </div>
+          <div class="mb-form">
+            <div class="mb-lbl">Last 10</div>
+            <div class="streak">
+              <i class="y">✓</i><i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i>
+              <i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i><i class="y">✓</i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="model-list">
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 1 · Aug 16, 2026</div>
+            <div class="mr-teams">Bayern München <span class="vs">vs</span> RB Leipzig</div>
+            <div class="mr-half">Halftime 1–0</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge over">Over 1.5 · 78%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 3–2 · 3 2nd-half goals</div>
+            <div class="hresult" style="color:var(--over);">✓ Correct</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>1.14</b></div>
+              <div><span>away_expected_goals_1ht</span><b>0.41</b></div>
+              <div><span>diff_xg</span><b>0.73</b></div>
+              <div><span>total_xg</span><b>1.55</b></div>
+              <div><span>home_total_shots_1ht</span><b>9</b></div>
+              <div><span>away_total_shots_1ht</span><b>3</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>4</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
+              <div><span>home_shot_accuracy</span><b>44.4</b></div>
+              <div><span>away_shot_accuracy</span><b>33.3</b></div>
+              <div><span>home_ball_possession_1ht</span><b>63.4</b></div>
+              <div><span>away_ball_possession_1ht</span><b>36.6</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>5</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>1</b></div>
+              <div><span>home_passes_total_1ht</span><b>312</b></div>
+              <div><span>away_passes_total_1ht</span><b>178</b></div>
+              <div><span>home_pass_accuracy</span><b>89.1</b></div>
+              <div><span>away_pass_accuracy</span><b>84.3</b></div>
+              <div><span>home_fouls_1ht</span><b>4</b></div>
+              <div><span>away_fouls_1ht</span><b>7</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>2</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>1</b></div>
+              <div><span>score_total_HT</span><b>1</b></div>
+              <div><span>pressure_index_HT</span><b>6.8</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.71</b></div>
+              <div><span>market_competitiveness</span><b>0.86</b></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 1 · Aug 16, 2026</div>
+            <div class="mr-teams">FC Augsburg <span class="vs">vs</span> Mainz 05</div>
+            <div class="mr-half">Halftime 0–0</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge under">Under 1.5 · 66%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 0–1 · 1 2nd-half goal</div>
+            <div class="hresult" style="color:var(--over);">✓ Correct</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>0.32</b></div>
+              <div><span>away_expected_goals_1ht</span><b>0.28</b></div>
+              <div><span>diff_xg</span><b>0.04</b></div>
+              <div><span>total_xg</span><b>0.60</b></div>
+              <div><span>home_total_shots_1ht</span><b>4</b></div>
+              <div><span>away_total_shots_1ht</span><b>3</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>1</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
+              <div><span>home_shot_accuracy</span><b>25.0</b></div>
+              <div><span>away_shot_accuracy</span><b>33.3</b></div>
+              <div><span>home_ball_possession_1ht</span><b>49.1</b></div>
+              <div><span>away_ball_possession_1ht</span><b>50.9</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>2</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>2</b></div>
+              <div><span>home_passes_total_1ht</span><b>210</b></div>
+              <div><span>away_passes_total_1ht</span><b>205</b></div>
+              <div><span>home_pass_accuracy</span><b>82.4</b></div>
+              <div><span>away_pass_accuracy</span><b>81.0</b></div>
+              <div><span>home_fouls_1ht</span><b>5</b></div>
+              <div><span>away_fouls_1ht</span><b>6</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>0</b></div>
+              <div><span>score_total_HT</span><b>0</b></div>
+              <div><span>pressure_index_HT</span><b>3.1</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.38</b></div>
+              <div><span>market_competitiveness</span><b>0.91</b></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 2 · Aug 23, 2026</div>
+            <div class="mr-teams">Borussia Dortmund <span class="vs">vs</span> VfB Stuttgart</div>
+            <div class="mr-half">Halftime 2–1</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge over">Over 1.5 · 83%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 3–2 · 2 2nd-half goals</div>
+            <div class="hresult" style="color:var(--over);">✓ Correct</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>1.62</b></div>
+              <div><span>away_expected_goals_1ht</span><b>1.08</b></div>
+              <div><span>diff_xg</span><b>0.54</b></div>
+              <div><span>total_xg</span><b>2.70</b></div>
+              <div><span>home_total_shots_1ht</span><b>8</b></div>
+              <div><span>away_total_shots_1ht</span><b>6</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>5</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>3</b></div>
+              <div><span>home_shot_accuracy</span><b>62.5</b></div>
+              <div><span>away_shot_accuracy</span><b>50.0</b></div>
+              <div><span>home_ball_possession_1ht</span><b>54.8</b></div>
+              <div><span>away_ball_possession_1ht</span><b>45.2</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>4</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>3</b></div>
+              <div><span>home_passes_total_1ht</span><b>298</b></div>
+              <div><span>away_passes_total_1ht</span><b>240</b></div>
+              <div><span>home_pass_accuracy</span><b>87.6</b></div>
+              <div><span>away_pass_accuracy</span><b>83.9</b></div>
+              <div><span>home_fouls_1ht</span><b>3</b></div>
+              <div><span>away_fouls_1ht</span><b>5</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>0</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>1</b></div>
+              <div><span>score_total_HT</span><b>3</b></div>
+              <div><span>pressure_index_HT</span><b>8.2</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.64</b></div>
+              <div><span>market_competitiveness</span><b>0.83</b></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 2 · Aug 24, 2026</div>
+            <div class="mr-teams">Werder Bremen <span class="vs">vs</span> Union Berlin</div>
+            <div class="mr-half">Halftime 0–0</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge under">Under 1.5 · 61%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 2–1 · 3 2nd-half goals</div>
+            <div class="hresult" style="color:var(--under);">✕ Missed</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>0.51</b></div>
+              <div><span>away_expected_goals_1ht</span><b>0.39</b></div>
+              <div><span>diff_xg</span><b>0.12</b></div>
+              <div><span>total_xg</span><b>0.90</b></div>
+              <div><span>home_total_shots_1ht</span><b>5</b></div>
+              <div><span>away_total_shots_1ht</span><b>4</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>2</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
+              <div><span>home_shot_accuracy</span><b>40.0</b></div>
+              <div><span>away_shot_accuracy</span><b>25.0</b></div>
+              <div><span>home_ball_possession_1ht</span><b>52.0</b></div>
+              <div><span>away_ball_possession_1ht</span><b>48.0</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>3</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>2</b></div>
+              <div><span>home_passes_total_1ht</span><b>220</b></div>
+              <div><span>away_passes_total_1ht</span><b>198</b></div>
+              <div><span>home_pass_accuracy</span><b>80.5</b></div>
+              <div><span>away_pass_accuracy</span><b>78.2</b></div>
+              <div><span>home_fouls_1ht</span><b>7</b></div>
+              <div><span>away_fouls_1ht</span><b>5</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>2</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>0</b></div>
+              <div><span>score_total_HT</span><b>0</b></div>
+              <div><span>pressure_index_HT</span><b>4.0</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.41</b></div>
+              <div><span>market_competitiveness</span><b>0.89</b></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 3 · Aug 30, 2026</div>
+            <div class="mr-teams">Bayer Leverkusen <span class="vs">vs</span> SC Freiburg</div>
+            <div class="mr-half">Halftime 1–1</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge over">Over 1.5 · 72%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 2–1 · 1 2nd-half goal</div>
+            <div class="hresult" style="color:var(--under);">✕ Missed</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>0.88</b></div>
+              <div><span>away_expected_goals_1ht</span><b>0.79</b></div>
+              <div><span>diff_xg</span><b>0.09</b></div>
+              <div><span>total_xg</span><b>1.67</b></div>
+              <div><span>home_total_shots_1ht</span><b>7</b></div>
+              <div><span>away_total_shots_1ht</span><b>6</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>3</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>3</b></div>
+              <div><span>home_shot_accuracy</span><b>42.9</b></div>
+              <div><span>away_shot_accuracy</span><b>50.0</b></div>
+              <div><span>home_ball_possession_1ht</span><b>50.6</b></div>
+              <div><span>away_ball_possession_1ht</span><b>49.4</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>3</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>4</b></div>
+              <div><span>home_passes_total_1ht</span><b>260</b></div>
+              <div><span>away_passes_total_1ht</span><b>255</b></div>
+              <div><span>home_pass_accuracy</span><b>85.0</b></div>
+              <div><span>away_pass_accuracy</span><b>84.1</b></div>
+              <div><span>home_fouls_1ht</span><b>4</b></div>
+              <div><span>away_fouls_1ht</span><b>3</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>0</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>0</b></div>
+              <div><span>score_total_HT</span><b>2</b></div>
+              <div><span>pressure_index_HT</span><b>6.5</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.52</b></div>
+              <div><span>market_competitiveness</span><b>0.87</b></div>
+            </div>
+          </details>
+        </div>
+
+        <div class="model-row">
+          <div class="mr-head">
+            <div class="mr-meta">Matchday 3 · Aug 31, 2026</div>
+            <div class="mr-teams">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
+            <div class="mr-half">Halftime 0–1</div>
+          </div>
+          <div class="mr-pred">
+            <span class="badge over">Over 1.5 · 69%</span>
+          </div>
+          <div class="mr-result">
+            <div class="hscore">Final 1–3 · 2 2nd-half goals</div>
+            <div class="hresult" style="color:var(--over);">✓ Correct</div>
+          </div>
+          <details class="mr-vars">
+            <summary>See all 30 input variables (1st half)</summary>
+            <div class="vars-grid">
+              <div><span>home_expected_goals_1ht</span><b>0.61</b></div>
+              <div><span>away_expected_goals_1ht</span><b>0.97</b></div>
+              <div><span>diff_xg</span><b>-0.36</b></div>
+              <div><span>total_xg</span><b>1.58</b></div>
+              <div><span>home_total_shots_1ht</span><b>5</b></div>
+              <div><span>away_total_shots_1ht</span><b>7</b></div>
+              <div><span>home_shots_on_target_1ht</span><b>2</b></div>
+              <div><span>away_shots_on_target_1ht</span><b>4</b></div>
+              <div><span>home_shot_accuracy</span><b>40.0</b></div>
+              <div><span>away_shot_accuracy</span><b>57.1</b></div>
+              <div><span>home_ball_possession_1ht</span><b>44.7</b></div>
+              <div><span>away_ball_possession_1ht</span><b>55.3</b></div>
+              <div><span>home_corner_kicks_1ht</span><b>2</b></div>
+              <div><span>away_corner_kicks_1ht</span><b>5</b></div>
+              <div><span>home_passes_total_1ht</span><b>205</b></div>
+              <div><span>away_passes_total_1ht</span><b>240</b></div>
+              <div><span>home_pass_accuracy</span><b>79.0</b></div>
+              <div><span>away_pass_accuracy</span><b>86.3</b></div>
+              <div><span>home_fouls_1ht</span><b>6</b></div>
+              <div><span>away_fouls_1ht</span><b>4</b></div>
+              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
+              <div><span>home_red_cards_1ht</span><b>0</b></div>
+              <div><span>away_red_cards_1ht</span><b>0</b></div>
+              <div><span>score_diff_HT</span><b>-1</b></div>
+              <div><span>score_total_HT</span><b>1</b></div>
+              <div><span>pressure_index_HT</span><b>5.4</b></div>
+              <div><span>home_numerical_advantage</span><b>0</b></div>
+              <div><span>prob_home</span><b>0.35</b></div>
+              <div><span>market_competitiveness</span><b>0.90</b></div>
+            </div>
+          </details>
+        </div>
+
+      </div>
+
+      <div class="placeholder-note">🚧 Template view with sample data — once the backend is connected, this list builds itself from every match that reaches halftime.</div>
+    </div>
+  </section>
+</main>
+
+<main id="route-/bets" class="page" hidden>
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="shead">
+        <h2 class="page-title">Wetten</h2>
+        <div class="sub">Simulation with a S/ 100 starting bankroll, picking each day's matches with the highest probability of Over 1.5 goals in the 2nd half.</div>
+      </div>
+
+      <div class="bet-tabs">
+        <button type="button" class="bet-tab active" data-tab="flat" onclick="qjTab('flat')">Flat Mode</button>
+        <button type="button" class="bet-tab" data-tab="escalera" onclick="qjTab('escalera')">Ladder Mode</button>
+      </div>
+
+      <!-- FLAT -->
+      <div class="bet-panel" data-panel="flat">
+        <div class="model-banner">
+          <div class="mb-left">
+            <div class="mb-eyebrow">Flat Mode</div>
+            <div class="mb-model">S/ 118.60</div>
+            <div class="mb-sub">S/ 100 starting bankroll · flat S/ 5 stake per match, 2 picks on days with several matches (1 when there's only one, like Fridays)</div>
+          </div>
+          <div class="mb-right">
+            <div class="mb-stat">
+              <div class="mb-num" style="color:var(--over);">+18.6%</div>
+              <div class="mb-lbl">Return</div>
+            </div>
+            <div class="mb-stat">
+              <div class="mb-num">24</div>
+              <div class="mb-lbl">Bets placed</div>
+            </div>
+            <div class="mb-stat">
+              <div class="mb-num">63%</div>
+              <div class="mb-lbl">Hit rate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="model-list">
+          <div class="weekend-block">
+            <div class="weekend-title">Weekend · Matchday 1 · Aug 16–18, 2026</div>
+
+            <div class="bet-row">
+              <div class="br-meta">FRI 16 AUG</div>
+              <div class="br-match">Bayern München <span class="vs">vs</span> RB Leipzig</div>
+              <div class="br-odds">Odds 1.35</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 1.75</div>
+              <div class="br-bank">Bankroll S/ 101.75</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SAT 17 AUG</div>
+              <div class="br-match">Borussia Dortmund <span class="vs">vs</span> VfB Stuttgart</div>
+              <div class="br-odds">Odds 1.28</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 1.40</div>
+              <div class="br-bank">Bankroll S/ 103.15</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SAT 17 AUG</div>
+              <div class="br-match">Bayer Leverkusen <span class="vs">vs</span> SC Freiburg</div>
+              <div class="br-odds">Odds 1.42</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result lose">Lost · −S/ 5.00</div>
+              <div class="br-bank">Bankroll S/ 98.15</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SUN 18 AUG</div>
+              <div class="br-match">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
+              <div class="br-odds">Odds 1.52</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 2.60</div>
+              <div class="br-bank">Bankroll S/ 100.75</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SUN 18 AUG</div>
+              <div class="br-match">1. FC Köln <span class="vs">vs</span> Hertha BSC</div>
+              <div class="br-odds">Odds 1.60</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result lose">Lost · −S/ 5.00</div>
+              <div class="br-bank">Bankroll S/ 95.75</div>
+            </div>
+          </div>
+
+          <div class="weekend-block">
+            <div class="weekend-title">Weekend · Matchday 2 · Aug 23–25, 2026</div>
+
+            <div class="bet-row">
+              <div class="br-meta">FRI 23 AUG</div>
+              <div class="br-match">VfL Wolfsburg <span class="vs">vs</span> Mainz 05</div>
+              <div class="br-odds">Odds 1.44</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 2.20</div>
+              <div class="br-bank">Bankroll S/ 97.95</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SAT 24 AUG</div>
+              <div class="br-match">RB Leipzig <span class="vs">vs</span> Werder Bremen</div>
+              <div class="br-odds">Odds 1.31</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 1.55</div>
+              <div class="br-bank">Bankroll S/ 99.50</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SAT 24 AUG</div>
+              <div class="br-match">Bayern München <span class="vs">vs</span> Union Berlin</div>
+              <div class="br-odds">Odds 1.22</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 1.10</div>
+              <div class="br-bank">Bankroll S/ 100.60</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SUN 25 AUG</div>
+              <div class="br-match">SC Freiburg <span class="vs">vs</span> Augsburg</div>
+              <div class="br-odds">Odds 1.58</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result win">Won · +S/ 2.90</div>
+              <div class="br-bank">Bankroll S/ 103.50</div>
+            </div>
+            <div class="bet-row">
+              <div class="br-meta">SUN 25 AUG</div>
+              <div class="br-match">Borussia M'gladbach <span class="vs">vs</span> Hoffenheim</div>
+              <div class="br-odds">Odds 1.37</div>
+              <div class="br-stake">S/ 5</div>
+              <div class="br-result lose">Lost · −S/ 5.00</div>
+              <div class="br-bank">Bankroll S/ 98.50</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="placeholder-note">🚧 Template view — S/ 118.60 reflects 5 simulated weekends; the first 2 are shown here as an example of how the day-by-day detail is built.</div>
+      </div>
+
+      <!-- ESCALERA -->
+      <div class="bet-panel" data-panel="escalera" hidden>
+        <div class="model-banner">
+          <div class="mb-left">
+            <div class="mb-eyebrow">Ladder Mode</div>
+            <div class="mb-model">S/ 99.18</div>
+            <div class="mb-sub">S/ 100 starting bankroll · 3 steps per weekend, always staking what was won in the previous step. If it loses, that weekend's ladder ends right there.</div>
+          </div>
+          <div class="mb-right">
+            <div class="mb-stat">
+              <div class="mb-num" style="color:var(--under);">−0.8%</div>
+              <div class="mb-lbl">Return</div>
+            </div>
+            <div class="mb-stat">
+              <div class="mb-num">1/3</div>
+              <div class="mb-lbl">Completed ladders</div>
+            </div>
+            <div class="mb-stat">
+              <div class="mb-num">S/ 5</div>
+              <div class="mb-lbl">Starting stake per ladder</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="model-list">
+
+          <div class="ladder-block">
+            <div class="weekend-title">Weekend 1 · Aug 16–18, 2026 <span class="ladder-tag done">Completed ladder</span></div>
+            <div class="ladder-steps">
+              <div class="ladder-step win">
+                <div class="ls-n">Step 1 · Friday</div>
+                <div class="ls-match">Bayern München <span class="vs">vs</span> RB Leipzig</div>
+                <div class="ls-bet">Stake S/ 5.00 · odds 1.40</div>
+                <div class="ls-out">Won → S/ 7.00</div>
+              </div>
+              <div class="ladder-step win">
+                <div class="ls-n">Step 2 · Saturday</div>
+                <div class="ls-match">Borussia Dortmund <span class="vs">vs</span> VfB Stuttgart</div>
+                <div class="ls-bet">Stake S/ 7.00 · odds 1.35</div>
+                <div class="ls-out">Won → S/ 9.45</div>
+              </div>
+              <div class="ladder-step win">
+                <div class="ls-n">Step 3 · Sunday</div>
+                <div class="ls-match">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
+                <div class="ls-bet">Stake S/ 9.45 · odds 1.50</div>
+                <div class="ls-out">Won → S/ 14.18</div>
+              </div>
+            </div>
+            <div class="ladder-summary win">Ladder closed: +S/ 9.18 on the bankroll</div>
+          </div>
+
+          <div class="ladder-block">
+            <div class="weekend-title">Weekend 2 · Aug 23–25, 2026 <span class="ladder-tag busted">Busted at step 2</span></div>
+            <div class="ladder-steps">
+              <div class="ladder-step win">
+                <div class="ls-n">Step 1 · Friday</div>
+                <div class="ls-match">VfL Wolfsburg <span class="vs">vs</span> Mainz 05</div>
+                <div class="ls-bet">Stake S/ 5.00 · odds 1.30</div>
+                <div class="ls-out">Won → S/ 6.50</div>
+              </div>
+              <div class="ladder-step lose">
+                <div class="ls-n">Step 2 · Saturday</div>
+                <div class="ls-match">RB Leipzig <span class="vs">vs</span> Werder Bremen</div>
+                <div class="ls-bet">Stake S/ 6.50 · odds 1.45</div>
+                <div class="ls-out">Lost → ladder busted</div>
+              </div>
+              <div class="ladder-step pending">
+                <div class="ls-n">Step 3 · Sunday</div>
+                <div class="ls-match">—</div>
+                <div class="ls-bet">Not played</div>
+                <div class="ls-out">—</div>
+              </div>
+            </div>
+            <div class="ladder-summary lose">Ladder closed: −S/ 5.00 (only the step-1 stake is lost)</div>
+          </div>
+
+          <div class="ladder-block">
+            <div class="weekend-title">Weekend 3 · Aug 30–Sep 1, 2026 <span class="ladder-tag busted">Busted at step 1</span></div>
+            <div class="ladder-steps">
+              <div class="ladder-step lose">
+                <div class="ls-n">Step 1 · Friday</div>
+                <div class="ls-match">Bayer Leverkusen <span class="vs">vs</span> SC Freiburg</div>
+                <div class="ls-bet">Stake S/ 5.00 · odds 1.60</div>
+                <div class="ls-out">Lost → ladder busted</div>
+              </div>
+              <div class="ladder-step pending">
+                <div class="ls-n">Step 2 · Saturday</div>
+                <div class="ls-match">—</div>
+                <div class="ls-bet">Not played</div>
+                <div class="ls-out">—</div>
+              </div>
+              <div class="ladder-step pending">
+                <div class="ls-n">Step 3 · Sunday</div>
+                <div class="ls-match">—</div>
+                <div class="ls-bet">Not played</div>
+                <div class="ls-out">—</div>
+              </div>
+            </div>
+            <div class="ladder-summary lose">Ladder closed: −S/ 5.00</div>
+          </div>
+
+        </div>
+
+        <div class="placeholder-note">🚧 Template view — 3 sample ladders. High risk: a single loss cuts the whole weekend's streak.</div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<main id="route-/upcoming" class="page" hidden>
+  <section style="border-bottom:none;">
+    <div class="wrap">
+      <div class="shead">
+        <h2 class="page-title">Kommende Spiele</h2>
+        <div class="sub">2026–2027 season schedule. Each match's pick only unlocks once it reaches halftime.</div>
+      </div>
+
+      <div class="mini-stats">
+        <div class="mini-stat"><div class="mv">Matchday 4</div><div class="ml">Next matchday</div></div>
+        <div class="mini-stat"><div class="mv">Fri Sep 6</div><div class="ml">Next match</div></div>
+        <div class="mini-stat"><div class="mv">34</div><div class="ml">Matchdays this season</div></div>
+      </div>
+
+      <div class="model-list">
+
+        <div class="weekend-block">
+          <div class="weekend-title">Matchday 4 · Sep 6–8, 2026</div>
+          <div class="grid">
+            <div class="card locked">
+              <div class="matchup">RB Leipzig <span class="vs">vs</span> Bayern München</div>
+              <div class="score">Friday, Sep 6 · 20:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">VfB Stuttgart <span class="vs">vs</span> Bayer Leverkusen</div>
+              <div class="score">Saturday, Sep 7 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">SC Freiburg <span class="vs">vs</span> Borussia Dortmund</div>
+              <div class="score">Saturday, Sep 7 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Mainz 05 <span class="vs">vs</span> Werder Bremen</div>
+              <div class="score">Saturday, Sep 7 · 18:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Hoffenheim <span class="vs">vs</span> Union Berlin</div>
+              <div class="score">Sunday, Sep 8 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Eintracht Frankfurt <span class="vs">vs</span> FC Augsburg</div>
+              <div class="score">Sunday, Sep 8 · 17:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekend-block">
+          <div class="weekend-title">Matchday 5 · Sep 13–15, 2026</div>
+          <div class="grid">
+            <div class="card locked">
+              <div class="matchup">Bayern München <span class="vs">vs</span> VfL Wolfsburg</div>
+              <div class="score">Friday, Sep 13 · 20:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Borussia Dortmund <span class="vs">vs</span> RB Leipzig</div>
+              <div class="score">Saturday, Sep 14 · 18:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Werder Bremen <span class="vs">vs</span> Eintracht Frankfurt</div>
+              <div class="score">Saturday, Sep 14 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Union Berlin <span class="vs">vs</span> Mainz 05</div>
+              <div class="score">Saturday, Sep 14 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">FC Augsburg <span class="vs">vs</span> VfB Stuttgart</div>
+              <div class="score">Sunday, Sep 15 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Bayer Leverkusen <span class="vs">vs</span> SC Freiburg</div>
+              <div class="score">Sunday, Sep 15 · 17:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="weekend-block">
+          <div class="weekend-title">Matchday 6 · Sep 20–22, 2026</div>
+          <div class="grid">
+            <div class="card locked">
+              <div class="matchup">VfL Wolfsburg <span class="vs">vs</span> Werder Bremen</div>
+              <div class="score">Friday, Sep 20 · 20:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">RB Leipzig <span class="vs">vs</span> FC Augsburg</div>
+              <div class="score">Saturday, Sep 21 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">SC Freiburg <span class="vs">vs</span> Union Berlin</div>
+              <div class="score">Saturday, Sep 21 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Mainz 05 <span class="vs">vs</span> Bayern München</div>
+              <div class="score">Saturday, Sep 21 · 18:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">Eintracht Frankfurt <span class="vs">vs</span> Bayer Leverkusen</div>
+              <div class="score">Sunday, Sep 22 · 15:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+            <div class="card locked">
+              <div class="matchup">VfB Stuttgart <span class="vs">vs</span> Borussia Dortmund</div>
+              <div class="score">Sunday, Sep 22 · 17:30</div>
+              <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="placeholder-note">🚧 Template view — matchdays 4 to 6 shown as an example. The full 34-matchday schedule builds itself once it's connected to the repo's fixtures scraper.</div>
+    </div>
+  </section>
+</main>
+
+<main id="route-/how-it-works" class="page" hidden>
+  <section>
+    <div class="wrap">
+      <div class="shead">
+        <h2 class="page-title">Wie das Modell funktioniert</h2>
+        <div class="sub">The target, the algorithm, the ~30 input variables, and how the model in production was chosen and measured.</div>
+      </div>
+
+      <div class="model-banner">
+        <div class="mb-left">
+          <div class="mb-eyebrow">Model target</div>
+          <div class="mb-model" style="font-size:1.7rem;">Over 1.5 goals in the 2nd half?</div>
+          <div class="mb-sub">Binary classification (Over/Under 1.5) trained only on 1st-half data — nothing from the 2nd half enters the model, so the prediction is useful right at halftime.</div>
+        </div>
+        <div class="mb-right">
+          <div class="mb-stat"><div class="mb-num">2013–24</div><div class="mb-lbl">Training seasons</div></div>
+          <div class="mb-stat"><div class="mb-num">3,978</div><div class="mb-lbl">Matches in the dataset</div></div>
+        </div>
+      </div>
+
+      <div class="shead" style="margin-top:40px;">
+        <h2 style="font-size:1.2rem;">The pipeline, end to end</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="n">01</div>
+          <h3>EDA</h3>
+          <p>Chronological Train/Test split, univariate/bivariate analysis, missingness and correlations across ~45 metrics per match half.</p>
+        </div>
+        <div class="step">
+          <div class="n">02</div>
+          <h3>Feature Engineering</h3>
+          <p>9 families of features derived from the 1st half (see below), with two independent preprocessing tracks: one for linear models, one for trees.</p>
+        </div>
+        <div class="step">
+          <div class="n">03</div>
+          <h3>Training</h3>
+          <p>8 algorithm families tuned with temporal cross-validation (expanding-window <i>TimeSeriesSplit</i>), refitting the preprocessing inside every fold to avoid data leakage.</p>
+        </div>
+        <div class="step">
+          <div class="n">04</div>
+          <h3>Evaluation</h3>
+          <p>Winner selection, probability calibration, threshold choice, and final evaluation on Test — touched exactly once.</p>
+        </div>
+      </div>
+
+      <div class="shead" style="margin-top:40px;">
+        <h2 style="font-size:1.2rem;">The 9 variable families (1st half)</h2>
+        <div class="sub">Everything is computed exclusively from what happened in the first half.</div>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Differences & totals</div>
+          <div class="score">xG, shots, corners, fouls: home–away difference and sum.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Efficiency</div>
+          <div class="score">Pass accuracy, goal conversion per shot on target.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Shot accuracy</div>
+          <div class="score">Shots on target / total shots, by team and difference.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Halftime score</div>
+          <div class="score">Goal difference and total, draw state, pressure, who's ahead at the break.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Numerical superiority</div>
+          <div class="score">1st-half red cards and their effect on numerical advantage.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Market (odds)</div>
+          <div class="score">Implied 1X2 probabilities and the bookmaker's margin.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Market × score interaction</div>
+          <div class="score">How the market's expectation shifts with the halftime score.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Temporal</div>
+          <div class="score">Days of rest for each team since its previous match.</div>
+        </div>
+        <div class="card">
+          <div class="matchup" style="font-size:.95rem;">Recent form</div>
+          <div class="score">Each team's 2nd-half goal history in previous matches (stateful).</div>
+        </div>
+      </div>
+      <div class="see-more" style="cursor:default;color:var(--text-dim);margin-top:14px;">→ See the full breakdown of all 30 variables, per match, on the <a href="#/model" style="color:var(--accent);">Model</a> page.</div>
+
+      <div class="shead" style="margin-top:40px;">
+        <h2 style="font-size:1.2rem;">How the winning model was chosen</h2>
+      </div>
+      <div class="model-list">
+        <div class="ladder-block">
+          <div class="ls-n">01 · Training</div>
+          <p style="margin-top:6px;font-size:.9rem;color:var(--text-dim);">8 families tuned (logistic regression, SVM, KNN, random forest, extra trees, gradient boosting, XGBoost, LightGBM) via Optuna/grid search, using the one-standard-error rule to pick each family's winning configuration.</p>
+        </div>
+        <div class="ladder-block">
+          <div class="ls-n">02 · Selection</div>
+          <p style="margin-top:6px;font-size:.9rem;color:var(--text-dim);">The 8 candidates are ranked by their cross-validation score. The winner is chosen via paired bootstrap (rank 1 vs. rank 2) on the ROC-AUC difference, tie-breaking toward the simpler model.</p>
+        </div>
+        <div class="ladder-block">
+          <div class="ls-n">03 · Calibration</div>
+          <p style="margin-top:6px;font-size:.9rem;color:var(--text-dim);">The model picks between sigmoid and isotonic calibration (whichever minimizes the Brier score) via nested cross-fitting, then refits on 100% of the predictions.</p>
+        </div>
+        <div class="ladder-block">
+          <div class="ls-n">04 · Threshold</div>
+          <p style="margin-top:6px;font-size:.9rem;color:var(--text-dim);">The cutoff is chosen between a fixed 0.5, max F1, or whichever maximizes expected value betting against the market's odds (Over/Under 1.5).</p>
+        </div>
+      </div>
+
+      <div class="shead" style="margin-top:40px;">
+        <h2 style="font-size:1.2rem;">Winning model's metrics (Test, exactly once)</h2>
+        <div class="sub">95% confidence intervals via bootstrap.</div>
+      </div>
+      <div class="mini-stats" style="grid-template-columns:repeat(auto-fit,minmax(130px,1fr));">
+        <div class="mini-stat"><div class="mv">0.81</div><div class="ml">ROC-AUC (±0.03)</div></div>
+        <div class="mini-stat"><div class="mv">74%</div><div class="ml">Accuracy (±2.1)</div></div>
+        <div class="mini-stat"><div class="mv">0.77</div><div class="ml">Precision</div></div>
+        <div class="mini-stat"><div class="mv">0.71</div><div class="ml">Recall</div></div>
+        <div class="mini-stat"><div class="mv">0.74</div><div class="ml">F1-score</div></div>
+        <div class="mini-stat"><div class="mv">0.171</div><div class="ml">Brier score</div></div>
+      </div>
+      <div class="placeholder-note">🚧 Sample metrics. In production these come from the <code>final_evaluation</code> step of the evaluation pipeline (<code>docs/pipelines/evaluation.md</code>), computed exactly once on the Test match.</div>
+
+      <div class="shead" style="margin-top:40px;">
+        <h2 style="font-size:1.2rem;">ROC-AUC across the 8 candidates</h2>
+        <div class="sub">Temporal cross-validation (Train/CV). XGBoost won via paired bootstrap over the runner-up.</div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-bars">
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">XGBoost</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill win" style="width:88.6%;"><span class="chart-bar-tip">Winner — chosen via paired bootstrap vs. LightGBM</span></div></div>
+            <div class="chart-bar-value win">0.81</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">LightGBM</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:85.7%;"></div></div>
+            <div class="chart-bar-value">0.80</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">Gradient Boosting</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:82.9%;"></div></div>
+            <div class="chart-bar-value">0.79</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">Extra Trees</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:77.1%;"></div></div>
+            <div class="chart-bar-value">0.77</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">Random Forest</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:74.3%;"></div></div>
+            <div class="chart-bar-value">0.76</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">SVM</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:68.6%;"></div></div>
+            <div class="chart-bar-value">0.74</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">Logistic Regression</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:65.7%;"></div></div>
+            <div class="chart-bar-value">0.73</div>
+          </div>
+          <div class="chart-bar-row">
+            <div class="chart-bar-label">KNN</div>
+            <div class="chart-bar-track"><div class="chart-bar-fill" style="width:51.4%;"></div></div>
+            <div class="chart-bar-value">0.68</div>
+          </div>
+        </div>
+        <div class="chart-caption">Axis starts at 0.50 (chance) and goes to 0.85, so the gap between candidates is visible.</div>
+      </div>
+
+      <div class="chart-grid-2">
+        <div>
+          <div class="shead" style="margin-top:40px;">
+            <h2 style="font-size:1.2rem;">Probability calibration</h2>
+            <div class="sub">When the model says 70%, does it hit ~70% of the time?</div>
+          </div>
+          <div class="chart-card">
+            <svg viewBox="0 0 320 240" class="calib-svg" role="img" aria-label="Calibration curve: predicted probability vs. observed frequency">
+              <line x1="40" y1="10" x2="40" y2="200" stroke="var(--line)" stroke-width="1"/>
+              <line x1="40" y1="200" x2="300" y2="200" stroke="var(--line)" stroke-width="1"/>
+              <line x1="40" y1="200" x2="300" y2="10" stroke="var(--text-dim)" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <polyline points="66,178 118,140 170,100 222,60 274,32" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="66" cy="178" r="4" fill="var(--accent)"><title>10% predicted → 8% observed</title></circle>
+              <circle cx="118" cy="140" r="4" fill="var(--accent)"><title>30% predicted → 27% observed</title></circle>
+              <circle cx="170" cy="100" r="4" fill="var(--accent)"><title>50% predicted → 52% observed</title></circle>
+              <circle cx="222" cy="60" r="4" fill="var(--accent)"><title>70% predicted → 74% observed</title></circle>
+              <circle cx="274" cy="32" r="4" fill="var(--accent)"><title>90% predicted → 86% observed</title></circle>
+              <text x="40" y="222" font-size="10" fill="var(--text-dim)" font-family="IBM Plex Mono">0%</text>
+              <text x="270" y="222" font-size="10" fill="var(--text-dim)" font-family="IBM Plex Mono">100%</text>
+              <text x="170" y="236" font-size="10" fill="var(--text-dim)" font-family="IBM Plex Mono" text-anchor="middle">Predicted probability</text>
+              <text x="8" y="110" font-size="10" fill="var(--text-dim)" font-family="IBM Plex Mono" transform="rotate(-90 8 110)" text-anchor="middle">Observed frequency</text>
+            </svg>
+            <div class="chart-caption"><span style="color:var(--accent);">●</span> Calibrated model &nbsp;·&nbsp; <span style="color:var(--text-dim);">┄</span> Perfect calibration</div>
+          </div>
+        </div>
+
+        <div>
+          <div class="shead" style="margin-top:40px;">
+            <h2 style="font-size:1.2rem;">Explainability (SHAP)</h2>
+            <div class="sub">Top 10 variables by average impact on the prediction.</div>
+          </div>
+          <div class="chart-card">
+            <div class="chart-bars">
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">home_expected_goals_1ht</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:100%;"></div></div>
+                <div class="chart-bar-value">0.184</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">diff_xg</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:93%;"></div></div>
+                <div class="chart-bar-value">0.171</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">score_diff_HT</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:83%;"></div></div>
+                <div class="chart-bar-value">0.153</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">away_expected_goals_1ht</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:70%;"></div></div>
+                <div class="chart-bar-value">0.129</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">market_competitiveness</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:59%;"></div></div>
+                <div class="chart-bar-value">0.108</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">home_shots_on_target_1ht</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:52%;"></div></div>
+                <div class="chart-bar-value">0.095</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">pressure_index_HT</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:47%;"></div></div>
+                <div class="chart-bar-value">0.087</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">home_ball_possession_1ht</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:43%;"></div></div>
+                <div class="chart-bar-value">0.079</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">prob_home</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:37%;"></div></div>
+                <div class="chart-bar-value">0.068</div>
+              </div>
+              <div class="chart-bar-row shap">
+                <div class="chart-bar-label mono">home_pass_accuracy</div>
+                <div class="chart-bar-track"><div class="chart-bar-fill" style="width:33%;"></div></div>
+                <div class="chart-bar-value">0.061</div>
+              </div>
+            </div>
+            <div class="chart-caption">Mean SHAP magnitude (|value|) — dispatched by family: TreeExplainer for XGBoost.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="placeholder-note">🚧 Sample charts. In production these come from the <code>error_analysis</code> and <code>explainability</code> steps of the evaluation pipeline, computed exactly once on Test for the winning model.</div>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="disclaimer"><b>Note:</b> the matches, results and percentages in this view are examples — it isn't connected to live data yet. Second Half is an informational tool based on a statistical model, not a guarantee of any outcome. Bet responsibly.</div>
+    <div class="brand">
+      <img class="logo-light" src="assets/logo-light.png" alt="Quotenjäger">
+      <img class="logo-dark" src="assets/logo-dark.png" alt="Quotenjäger">
+    </div>
+  </div>
+</footer>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
