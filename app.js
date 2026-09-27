@@ -62,6 +62,23 @@ function formatKickoff(kickoffUtc) {
   return weekday + ' · ' + hour + ':' + minute;
 }
 
+// Igual que formatKickoff pero con la fecha completa — para el listado de
+// /upcoming, donde solo el nombre del día de la semana sería ambiguo a lo
+// largo de varias semanas.
+function formatKickoffFull(kickoffUtc) {
+  if (!kickoffUtc) return '';
+  var m = /^(\d{4})-(\d{2})-(\d{2})[T ](\d{2}):(\d{2})/.exec(kickoffUtc);
+  if (!m) return kickoffUtc;
+  var year = +m[1], month = +m[2], day = +m[3], hour = m[4], minute = m[5];
+  var dateLabel = new Date(Date.UTC(year, month - 1, day)).toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+    timeZone: 'UTC',
+  });
+  return dateLabel + ' · ' + hour + ':' + minute;
+}
+
 function halftimeFeatureHtml(m) {
   var pickLabel = m.pick === 'over' ? 'Over' : 'Under';
   var goalsPhrase = m.pick === 'over' ? '2 or more goals' : 'fewer than 2 goals';
@@ -102,6 +119,16 @@ function lockedCardHtml(m) {
     '<div class="card locked">' +
     '<div class="matchup">' + escapeHtml(m.team_home) + ' <span class="vs">vs</span> ' + escapeHtml(m.team_away) + '</div>' +
     '<div class="score">' + escapeHtml(formatKickoff(m.kickoff_utc)) + '</div>' +
+    '<div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>' +
+    '</div>'
+  );
+}
+
+function lockedCardFullHtml(m) {
+  return (
+    '<div class="card locked">' +
+    '<div class="matchup">' + escapeHtml(m.team_home) + ' <span class="vs">vs</span> ' + escapeHtml(m.team_away) + '</div>' +
+    '<div class="score">' + escapeHtml(formatKickoffFull(m.kickoff_utc)) + '</div>' +
     '<div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>' +
     '</div>'
   );
@@ -291,5 +318,33 @@ async function renderModelPage() {
   }
 }
 
+// ---- Supabase-backed rendering (Upcoming page) ----
+
+async function renderUpcomingPage() {
+  var miniStatsEl = document.getElementById('upcoming-mini-stats');
+  var gridEl = document.getElementById('upcoming-grid-full');
+  miniStatsEl.innerHTML = LOADING_HTML;
+  gridEl.innerHTML = LOADING_HTML;
+  try {
+    var matches = await window.qjData.getUpcomingMatches();
+
+    if (!matches.length) {
+      miniStatsEl.innerHTML = '';
+      gridEl.innerHTML = emptyStateHtml('No upcoming matches right now.');
+      return;
+    }
+
+    miniStatsEl.innerHTML =
+      '<div class="mini-stat"><div class="mv">' + escapeHtml(formatKickoffFull(matches[0].kickoff_utc)) + '</div><div class="ml">Next match</div></div>' +
+      '<div class="mini-stat"><div class="mv">' + matches.length + '</div><div class="ml">Upcoming matches</div></div>';
+
+    gridEl.innerHTML = matches.map(lockedCardFullHtml).join('');
+  } catch (e) {
+    miniStatsEl.innerHTML = '';
+    gridEl.innerHTML = errorStateHtml();
+  }
+}
+
 renderHome();
 renderModelPage();
+renderUpcomingPage();
