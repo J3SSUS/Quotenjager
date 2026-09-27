@@ -80,40 +80,47 @@ async function getHalftimeMatches() {
 }
 
 // matches con status in ('finished','resolved'): marcador final + pick + acierto.
-// Devuelve: [{ match_id, team_home, team_away, home_goals_2ht, away_goals_2ht,
-//              total_goals_2ht, y_prob, pick, outcome: 'over'|'under', correct: bool,
-//              predicted_at }], ordenado por predicted_at desc.
+// Devuelve: [{ match_id, team_home, team_away, kickoff_utc,
+//              home_goals_final, away_goals_final, home_goals_1ht, away_goals_1ht,
+//              home_goals_2ht, away_goals_2ht, total_goals_2ht, y_prob, pick,
+//              outcome: 'over'|'under', correct: bool, predicted_at }],
+//              ordenado por predicted_at desc.
 async function getModelLog(limit) {
-  const { data: matches, error } = await supabase
-    .from('matches')
-    .select('match_id')
-    .in('status', ['finished', 'resolved']);
-  if (error) throw error;
-  if (!matches.length) return [];
-
-  const ids = matches.map((m) => m.match_id);
-  const [{ data: unified, error: unifiedError }, { data: preds, error: predsError }] = await Promise.all([
-    supabase
-      .from('matches_unified')
-      .select('match_id, team_home, team_away, home_goals_2ht, away_goals_2ht')
-      .in('match_id', ids),
-    supabase
-      .from('predictions')
-      .select('match_id, y_prob, predicted_at')
-      .in('match_id', ids)
-      .order('predicted_at', { ascending: false }),
-  ]);
-  if (unifiedError) throw unifiedError;
+  // Se parte de `predictions` (acotado a los partidos que ya tuvieron inferencia)
+  // en vez de `matches` filtrado por status: la tabla `matches` incluye ~4.000
+  // partidos históricos migrados (SPEC 07) sin ninguna predicción, y meterlos
+  // todos en un `.in(match_id, ...)` rompería por tamaño de URL/consulta.
+  const { data: preds, error: predsError } = await supabase
+    .from('predictions')
+    .select('match_id, y_prob, predicted_at')
+    .order('predicted_at', { ascending: false });
   if (predsError) throw predsError;
+  if (!preds.length) return [];
 
   const latestPredByMatch = latestByMatchId(preds);
+  const ids = Object.keys(latestPredByMatch);
+
+  const [{ data: matches, error: matchesError }, { data: unified, error: unifiedError }] = await Promise.all([
+    supabase.from('matches').select('match_id, status').in('match_id', ids),
+    supabase
+      .from('matches_unified')
+      .select('match_id, team_home, team_away, kickoff_utc, home_goals_1ht, away_goals_1ht, home_goals_2ht, away_goals_2ht')
+      .in('match_id', ids),
+  ]);
+  if (matchesError) throw matchesError;
+  if (unifiedError) throw unifiedError;
+
+  const settledIds = new Set(
+    matches.filter((m) => m.status === 'finished' || m.status === 'resolved').map((m) => m.match_id)
+  );
   const unifiedById = Object.fromEntries(unified.map((u) => [u.match_id, u]));
 
   const rows = ids
+    .filter((id) => settledIds.has(id))
     .map((id) => {
       const u = unifiedById[id];
       const p = latestPredByMatch[id];
-      if (!u || !p) return null;
+      if (!u) return null;
       const totalGoals2ht = u.home_goals_2ht + u.away_goals_2ht;
       const pick = p.y_prob >= PREDICTION_THRESHOLD ? 'over' : 'under';
       const outcome = totalGoals2ht >= OU_LINE_2HT ? 'over' : 'under';
@@ -121,6 +128,13 @@ async function getModelLog(limit) {
         match_id: id,
         team_home: u.team_home,
         team_away: u.team_away,
+        kickoff_utc: u.kickoff_utc,
+        // Marcador final real (1T + 2T) — home_goals_2ht/away_goals_2ht por sí solos
+        // son solo el parcial del 2do tiempo, no el resultado final del partido.
+        home_goals_final: u.home_goals_1ht + u.home_goals_2ht,
+        away_goals_final: u.away_goals_1ht + u.away_goals_2ht,
+        home_goals_1ht: u.home_goals_1ht,
+        away_goals_1ht: u.away_goals_1ht,
         home_goals_2ht: u.home_goals_2ht,
         away_goals_2ht: u.away_goals_2ht,
         total_goals_2ht: totalGoals2ht,
@@ -137,8 +151,10 @@ async function getModelLog(limit) {
   return typeof limit === 'number' ? rows.slice(0, limit) : rows;
 }
 
-// Agregación sobre getModelLog(): accuracy acumulada, racha, matches_predicted.
-// Devuelve: { accuracy_pct, matches_predicted, last10: [bool, ...], streak_len }
+// Agregación sobre getModelLog(): accuracy acumulada, racha, matches_predicted,
+// más el bundle_tag/model_version vigente (usado por el banner de /model).
+// Devuelve: { accuracy_pct, matches_predicted, last10: [bool, ...], streak_len,
+//             bundle_tag, model_version }
 async function getTrackRecord() {
   const rows = await getModelLog();
   const matchesPredicted = rows.length;
@@ -153,11 +169,22 @@ async function getTrackRecord() {
     streakLen += 1;
   }
 
+  // "Modelo vigente": el bundle_tag/model_version de la predicción más reciente
+  // de toda la tabla (no fijo — ver Decisions de SPEC 13, hoy resuelve a dagshub-v1).
+  const { data: latest, error: latestError } = await supabase
+    .from('predictions')
+    .select('bundle_tag, model_version')
+    .order('predicted_at', { ascending: false })
+    .limit(1);
+  if (latestError) throw latestError;
+
   return {
     accuracy_pct: accuracyPct,
     matches_predicted: matchesPredicted,
     last10,
     streak_len: streakLen,
+    bundle_tag: latest.length ? latest[0].bundle_tag : null,
+    model_version: latest.length ? latest[0].model_version : null,
   };
 }
 

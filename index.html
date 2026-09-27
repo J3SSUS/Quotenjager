@@ -33,8 +33,8 @@
     <h1>Betting on another <span class="accent-word">Niveau</span></h1>
 
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hv">112</div><div class="hl">Matches predicted<br>this season</div></div>
-      <div class="hero-stat"><div class="hv">69%</div><div class="hl">Cumulative accuracy<br>2026–27</div></div>
+      <div class="hero-stat"><div class="hv" id="hero-matches-predicted">–</div><div class="hl">Matches predicted<br>this season</div></div>
+      <div class="hero-stat"><div class="hv" id="hero-accuracy">–</div><div class="hl">Cumulative accuracy<br>2026–27</div></div>
     </div>
   </div>
 </div>
@@ -46,48 +46,9 @@
       <div class="sub">Matches that just reached the break — the prediction is ready before the second half even starts.</div>
     </div>
 
-    <div class="feature" style="margin-top:0;">
-      <div>
-        <div class="live"><span class="pulse"></span>Halftime</div>
-        <div class="teams">RB Leipzig <span class="vs">vs</span> Bayer Leverkusen</div>
-        <div class="meta">0–1 · Bundesliga, matchday 5</div>
-        <div class="verdict">The model sees an <b>82% probability</b> of 2 or more goals in the second half.</div>
-      </div>
-      <div class="flip">
-        <div class="pct">82%</div>
-        <div class="lbl">Over 1.5</div>
-      </div>
-    </div>
+    <div id="halftime-feature"><div class="placeholder-note">Loading…</div></div>
 
-    <div class="grid" style="margin-top:14px;">
-      <div class="card">
-        <div class="live-tag"><span class="pulse"></span>Halftime</div>
-        <div class="matchup">Werder Bremen <span class="vs">vs</span> Union Berlin</div>
-        <div class="score">1–1 at halftime</div>
-        <div class="pick-row">
-          <span class="badge over">Over 1.5</span>
-          <span class="conf">71%</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="live-tag"><span class="pulse"></span>Halftime</div>
-        <div class="matchup">FC Augsburg <span class="vs">vs</span> VfL Wolfsburg</div>
-        <div class="score">0–0 at halftime</div>
-        <div class="pick-row">
-          <span class="badge under">Under 1.5</span>
-          <span class="conf">64%</span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="live-tag"><span class="pulse"></span>Halftime</div>
-        <div class="matchup">Bayern München <span class="vs">vs</span> SC Freiburg</div>
-        <div class="score">2–0 at halftime</div>
-        <div class="pick-row">
-          <span class="badge over">Over 1.5</span>
-          <span class="conf">77%</span>
-        </div>
-      </div>
-    </div>
+    <div class="grid" id="halftime-grid" style="margin-top:14px;"></div>
   </div>
 </section>
 
@@ -97,23 +58,7 @@
       <h2>Upcoming matches</h2>
       <div class="sub">Not started yet, or still in the first half. The pick unlocks only once it reaches halftime.</div>
     </div>
-    <div class="grid">
-      <div class="card locked">
-        <div class="matchup">Borussia Dortmund <span class="vs">vs</span> Bayer Leverkusen</div>
-        <div class="score">Saturday · 18:30</div>
-        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
-      </div>
-      <div class="card locked">
-        <div class="matchup">VfB Stuttgart <span class="vs">vs</span> M'gladbach</div>
-        <div class="score">Saturday · 15:30</div>
-        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
-      </div>
-      <div class="card locked">
-        <div class="matchup">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
-        <div class="score">Sunday · 17:30</div>
-        <div class="pick-row"><span class="lockmsg">🔒 pick at halftime</span></div>
-      </div>
-    </div>
+    <div class="grid" id="upcoming-grid-home"><div class="placeholder-note">Loading…</div></div>
 
     <a class="see-more" href="#/upcoming">See full schedule →</a>
   </div>
@@ -126,40 +71,11 @@
       <div class="sub">Only settled picks, compared against the real result.</div>
     </div>
 
-    <div class="record-top">
-      <div class="record-big">68<span>% accuracy<br>last 50 matches</span></div>
-      <div class="streak">
-        <i class="y">✓</i><i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i>
-        <i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i><i class="y">✓</i>
-      </div>
-    </div>
+    <div class="record-top" id="record-top-home"><div class="placeholder-note">Loading…</div></div>
 
-    <div class="mini-stats">
-      <div class="mini-stat"><div class="mv">74%</div><div class="ml">Average confidence</div></div>
-      <div class="mini-stat"><div class="mv">4</div><div class="ml">Correct picks in a row</div></div>
-      <div class="mini-stat"><div class="mv">81%</div><div class="ml">Accuracy when the pick is above 75%</div></div>
-    </div>
+    <div class="mini-stats" id="mini-stats-home"></div>
 
-    <div>
-      <div class="history-row">
-        <div class="hteams">Hoffenheim <span style="color:var(--text-dim);font-weight:400;">vs</span> Mainz 05</div>
-        <div class="hscore">1–2 final · 3 2nd-half goals</div>
-        <div class="badge over">Over 1.5 · 76%</div>
-        <div class="hresult" style="color:var(--over);">✓</div>
-      </div>
-      <div class="history-row">
-        <div class="hteams">Union Berlin <span style="color:var(--text-dim);font-weight:400;">vs</span> VfL Bochum</div>
-        <div class="hscore">0–0 final · 1 2nd-half goal</div>
-        <div class="badge under">Under 1.5 · 69%</div>
-        <div class="hresult" style="color:var(--over);">✓</div>
-      </div>
-      <div class="history-row">
-        <div class="hteams">Bayer Leverkusen <span style="color:var(--text-dim);font-weight:400;">vs</span> SC Freiburg</div>
-        <div class="hscore">2–1 final · 1 2nd-half goal</div>
-        <div class="badge over">Over 1.5 · 58%</div>
-        <div class="hresult" style="color:var(--under);">✕</div>
-      </div>
-    </div>
+    <div id="history-rows-home"></div>
 
     <a class="see-more" href="#/model">See the model's full track record →</a>
   </div>
@@ -199,336 +115,13 @@
         <h2 class="page-title">Modell</h2>
         <div class="sub">Predictions from the 2026–2027 season onward, how the model is doing match by match, and the 1st-half variables that went into each pick.</div>
       </div>
-      <div class="model-banner">
-        <div class="mb-left">
-          <div class="mb-eyebrow">Model in production</div>
-          <div class="mb-model">XGBoost</div>
-          <div class="mb-sub">Binary classification · Over/Under 1.5 goals in the 2nd half · ~30 1st-half variables</div>
-        </div>
-        <div class="mb-right">
-          <div class="mb-stat">
-            <div class="mb-num">69%</div>
-            <div class="mb-lbl">2026–27 accuracy</div>
-          </div>
-          <div class="mb-stat">
-            <div class="mb-num">112</div>
-            <div class="mb-lbl">Matches predicted</div>
-          </div>
-          <div class="mb-form">
-            <div class="mb-lbl">Last 10</div>
-            <div class="streak">
-              <i class="y">✓</i><i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i>
-              <i class="y">✓</i><i class="n">✕</i><i class="y">✓</i><i class="y">✓</i><i class="y">✓</i>
-            </div>
-          </div>
-        </div>
+      <div class="model-banner" id="model-banner">
+        <div class="placeholder-note">Loading…</div>
       </div>
 
-      <div class="model-list">
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 1 · Aug 16, 2026</div>
-            <div class="mr-teams">Bayern München <span class="vs">vs</span> RB Leipzig</div>
-            <div class="mr-half">Halftime 1–0</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge over">Over 1.5 · 78%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 3–2 · 3 2nd-half goals</div>
-            <div class="hresult" style="color:var(--over);">✓ Correct</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>1.14</b></div>
-              <div><span>away_expected_goals_1ht</span><b>0.41</b></div>
-              <div><span>diff_xg</span><b>0.73</b></div>
-              <div><span>total_xg</span><b>1.55</b></div>
-              <div><span>home_total_shots_1ht</span><b>9</b></div>
-              <div><span>away_total_shots_1ht</span><b>3</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>4</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
-              <div><span>home_shot_accuracy</span><b>44.4</b></div>
-              <div><span>away_shot_accuracy</span><b>33.3</b></div>
-              <div><span>home_ball_possession_1ht</span><b>63.4</b></div>
-              <div><span>away_ball_possession_1ht</span><b>36.6</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>5</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>1</b></div>
-              <div><span>home_passes_total_1ht</span><b>312</b></div>
-              <div><span>away_passes_total_1ht</span><b>178</b></div>
-              <div><span>home_pass_accuracy</span><b>89.1</b></div>
-              <div><span>away_pass_accuracy</span><b>84.3</b></div>
-              <div><span>home_fouls_1ht</span><b>4</b></div>
-              <div><span>away_fouls_1ht</span><b>7</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>2</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>1</b></div>
-              <div><span>score_total_HT</span><b>1</b></div>
-              <div><span>pressure_index_HT</span><b>6.8</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.71</b></div>
-              <div><span>market_competitiveness</span><b>0.86</b></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 1 · Aug 16, 2026</div>
-            <div class="mr-teams">FC Augsburg <span class="vs">vs</span> Mainz 05</div>
-            <div class="mr-half">Halftime 0–0</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge under">Under 1.5 · 66%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 0–1 · 1 2nd-half goal</div>
-            <div class="hresult" style="color:var(--over);">✓ Correct</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>0.32</b></div>
-              <div><span>away_expected_goals_1ht</span><b>0.28</b></div>
-              <div><span>diff_xg</span><b>0.04</b></div>
-              <div><span>total_xg</span><b>0.60</b></div>
-              <div><span>home_total_shots_1ht</span><b>4</b></div>
-              <div><span>away_total_shots_1ht</span><b>3</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>1</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
-              <div><span>home_shot_accuracy</span><b>25.0</b></div>
-              <div><span>away_shot_accuracy</span><b>33.3</b></div>
-              <div><span>home_ball_possession_1ht</span><b>49.1</b></div>
-              <div><span>away_ball_possession_1ht</span><b>50.9</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>2</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>2</b></div>
-              <div><span>home_passes_total_1ht</span><b>210</b></div>
-              <div><span>away_passes_total_1ht</span><b>205</b></div>
-              <div><span>home_pass_accuracy</span><b>82.4</b></div>
-              <div><span>away_pass_accuracy</span><b>81.0</b></div>
-              <div><span>home_fouls_1ht</span><b>5</b></div>
-              <div><span>away_fouls_1ht</span><b>6</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>0</b></div>
-              <div><span>score_total_HT</span><b>0</b></div>
-              <div><span>pressure_index_HT</span><b>3.1</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.38</b></div>
-              <div><span>market_competitiveness</span><b>0.91</b></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 2 · Aug 23, 2026</div>
-            <div class="mr-teams">Borussia Dortmund <span class="vs">vs</span> VfB Stuttgart</div>
-            <div class="mr-half">Halftime 2–1</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge over">Over 1.5 · 83%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 3–2 · 2 2nd-half goals</div>
-            <div class="hresult" style="color:var(--over);">✓ Correct</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>1.62</b></div>
-              <div><span>away_expected_goals_1ht</span><b>1.08</b></div>
-              <div><span>diff_xg</span><b>0.54</b></div>
-              <div><span>total_xg</span><b>2.70</b></div>
-              <div><span>home_total_shots_1ht</span><b>8</b></div>
-              <div><span>away_total_shots_1ht</span><b>6</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>5</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>3</b></div>
-              <div><span>home_shot_accuracy</span><b>62.5</b></div>
-              <div><span>away_shot_accuracy</span><b>50.0</b></div>
-              <div><span>home_ball_possession_1ht</span><b>54.8</b></div>
-              <div><span>away_ball_possession_1ht</span><b>45.2</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>4</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>3</b></div>
-              <div><span>home_passes_total_1ht</span><b>298</b></div>
-              <div><span>away_passes_total_1ht</span><b>240</b></div>
-              <div><span>home_pass_accuracy</span><b>87.6</b></div>
-              <div><span>away_pass_accuracy</span><b>83.9</b></div>
-              <div><span>home_fouls_1ht</span><b>3</b></div>
-              <div><span>away_fouls_1ht</span><b>5</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>0</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>1</b></div>
-              <div><span>score_total_HT</span><b>3</b></div>
-              <div><span>pressure_index_HT</span><b>8.2</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.64</b></div>
-              <div><span>market_competitiveness</span><b>0.83</b></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 2 · Aug 24, 2026</div>
-            <div class="mr-teams">Werder Bremen <span class="vs">vs</span> Union Berlin</div>
-            <div class="mr-half">Halftime 0–0</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge under">Under 1.5 · 61%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 2–1 · 3 2nd-half goals</div>
-            <div class="hresult" style="color:var(--under);">✕ Missed</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>0.51</b></div>
-              <div><span>away_expected_goals_1ht</span><b>0.39</b></div>
-              <div><span>diff_xg</span><b>0.12</b></div>
-              <div><span>total_xg</span><b>0.90</b></div>
-              <div><span>home_total_shots_1ht</span><b>5</b></div>
-              <div><span>away_total_shots_1ht</span><b>4</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>2</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>1</b></div>
-              <div><span>home_shot_accuracy</span><b>40.0</b></div>
-              <div><span>away_shot_accuracy</span><b>25.0</b></div>
-              <div><span>home_ball_possession_1ht</span><b>52.0</b></div>
-              <div><span>away_ball_possession_1ht</span><b>48.0</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>3</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>2</b></div>
-              <div><span>home_passes_total_1ht</span><b>220</b></div>
-              <div><span>away_passes_total_1ht</span><b>198</b></div>
-              <div><span>home_pass_accuracy</span><b>80.5</b></div>
-              <div><span>away_pass_accuracy</span><b>78.2</b></div>
-              <div><span>home_fouls_1ht</span><b>7</b></div>
-              <div><span>away_fouls_1ht</span><b>5</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>2</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>0</b></div>
-              <div><span>score_total_HT</span><b>0</b></div>
-              <div><span>pressure_index_HT</span><b>4.0</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.41</b></div>
-              <div><span>market_competitiveness</span><b>0.89</b></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 3 · Aug 30, 2026</div>
-            <div class="mr-teams">Bayer Leverkusen <span class="vs">vs</span> SC Freiburg</div>
-            <div class="mr-half">Halftime 1–1</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge over">Over 1.5 · 72%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 2–1 · 1 2nd-half goal</div>
-            <div class="hresult" style="color:var(--under);">✕ Missed</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>0.88</b></div>
-              <div><span>away_expected_goals_1ht</span><b>0.79</b></div>
-              <div><span>diff_xg</span><b>0.09</b></div>
-              <div><span>total_xg</span><b>1.67</b></div>
-              <div><span>home_total_shots_1ht</span><b>7</b></div>
-              <div><span>away_total_shots_1ht</span><b>6</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>3</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>3</b></div>
-              <div><span>home_shot_accuracy</span><b>42.9</b></div>
-              <div><span>away_shot_accuracy</span><b>50.0</b></div>
-              <div><span>home_ball_possession_1ht</span><b>50.6</b></div>
-              <div><span>away_ball_possession_1ht</span><b>49.4</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>3</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>4</b></div>
-              <div><span>home_passes_total_1ht</span><b>260</b></div>
-              <div><span>away_passes_total_1ht</span><b>255</b></div>
-              <div><span>home_pass_accuracy</span><b>85.0</b></div>
-              <div><span>away_pass_accuracy</span><b>84.1</b></div>
-              <div><span>home_fouls_1ht</span><b>4</b></div>
-              <div><span>away_fouls_1ht</span><b>3</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>0</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>0</b></div>
-              <div><span>score_total_HT</span><b>2</b></div>
-              <div><span>pressure_index_HT</span><b>6.5</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.52</b></div>
-              <div><span>market_competitiveness</span><b>0.87</b></div>
-            </div>
-          </details>
-        </div>
-
-        <div class="model-row">
-          <div class="mr-head">
-            <div class="mr-meta">Matchday 3 · Aug 31, 2026</div>
-            <div class="mr-teams">Eintracht Frankfurt <span class="vs">vs</span> Hoffenheim</div>
-            <div class="mr-half">Halftime 0–1</div>
-          </div>
-          <div class="mr-pred">
-            <span class="badge over">Over 1.5 · 69%</span>
-          </div>
-          <div class="mr-result">
-            <div class="hscore">Final 1–3 · 2 2nd-half goals</div>
-            <div class="hresult" style="color:var(--over);">✓ Correct</div>
-          </div>
-          <details class="mr-vars">
-            <summary>See all 30 input variables (1st half)</summary>
-            <div class="vars-grid">
-              <div><span>home_expected_goals_1ht</span><b>0.61</b></div>
-              <div><span>away_expected_goals_1ht</span><b>0.97</b></div>
-              <div><span>diff_xg</span><b>-0.36</b></div>
-              <div><span>total_xg</span><b>1.58</b></div>
-              <div><span>home_total_shots_1ht</span><b>5</b></div>
-              <div><span>away_total_shots_1ht</span><b>7</b></div>
-              <div><span>home_shots_on_target_1ht</span><b>2</b></div>
-              <div><span>away_shots_on_target_1ht</span><b>4</b></div>
-              <div><span>home_shot_accuracy</span><b>40.0</b></div>
-              <div><span>away_shot_accuracy</span><b>57.1</b></div>
-              <div><span>home_ball_possession_1ht</span><b>44.7</b></div>
-              <div><span>away_ball_possession_1ht</span><b>55.3</b></div>
-              <div><span>home_corner_kicks_1ht</span><b>2</b></div>
-              <div><span>away_corner_kicks_1ht</span><b>5</b></div>
-              <div><span>home_passes_total_1ht</span><b>205</b></div>
-              <div><span>away_passes_total_1ht</span><b>240</b></div>
-              <div><span>home_pass_accuracy</span><b>79.0</b></div>
-              <div><span>away_pass_accuracy</span><b>86.3</b></div>
-              <div><span>home_fouls_1ht</span><b>6</b></div>
-              <div><span>away_fouls_1ht</span><b>4</b></div>
-              <div><span>home_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>away_yellow_cards_1ht</span><b>1</b></div>
-              <div><span>home_red_cards_1ht</span><b>0</b></div>
-              <div><span>away_red_cards_1ht</span><b>0</b></div>
-              <div><span>score_diff_HT</span><b>-1</b></div>
-              <div><span>score_total_HT</span><b>1</b></div>
-              <div><span>pressure_index_HT</span><b>5.4</b></div>
-              <div><span>home_numerical_advantage</span><b>0</b></div>
-              <div><span>prob_home</span><b>0.35</b></div>
-              <div><span>market_competitiveness</span><b>0.90</b></div>
-            </div>
-          </details>
-        </div>
-
+      <div class="model-list" id="model-list">
+        <div class="placeholder-note">Loading…</div>
       </div>
-
-      <div class="placeholder-note">🚧 Template view with sample data — once the backend is connected, this list builds itself from every match that reaches halftime.</div>
     </div>
   </section>
 </main>
@@ -1189,6 +782,6 @@
 
 <script src="config.js"></script>
 <script type="module" src="supabase-client.js"></script>
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 </body>
 </html>
